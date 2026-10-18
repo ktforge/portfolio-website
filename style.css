@@ -302,6 +302,11 @@ address {
   font-weight: 600;
 }
 
+/* let long links (like the email) wrap instead of overflowing */
+.contact-list a {
+  overflow-wrap: anywhere;
+}
+
 /* ===== Footer ===== */
 footer {
   display: flex;
@@ -329,4 +334,99 @@ footer a {
 
 footer a:hover {
   color: var(--accent);
+}
+
+/* ===== Responsive: tablet (900px and below) ===== */
+@media (max-width: 900px) {
+  /* 2 project columns instead of 3 */
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Smaller photo and gap on the contact page */
+  #contact {
+    gap: 32px;
+  }
+
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* ===== Responsive: phone (600px and below) ===== */
+@media (max-width: 600px) {
+  main {
+    padding: 0 16px;
+  }
+
+  /* Header: name and toggle on top, nav on its own row */
+  header {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .logo,
+  #theme-toggle {
+    white-space: nowrap;
+  }
+
+  #theme-toggle {
+    margin-left: auto;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* Hero: smaller text and spacing */
+  #hero {
+    padding: 56px 0 40px;
+  }
+
+  #hero h1 {
+    font-size: 2.25rem;
+  }
+
+  /* 1 project column */
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact: stack photo above info, centered */
+  #contact {
+    flex-direction: column;
+    gap: 24px;
+    padding: 48px 0;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .contact-info h1 {
+    font-size: 2rem;
+  }
+
+  /* Label sits above its value */
+  .contact-list span {
+    display: block;
+    width: auto;
+  }
+
+  /* Footer: stack and center */
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
 }
