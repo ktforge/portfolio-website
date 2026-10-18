@@ -9,12 +9,144 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Javascript (defer waits until the HTML loads) -->
+    <!-- JavaScript (defer waits until the HTML loads) -->
     <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- Temporary test content -->
-    <h1>DeVante Bush</h1>
-    <p>Portfolio coming soon.</p>
+    <!-- Header: name, navigation, theme toggle -->
+    <header>
+      <a href="index.html" class="logo">DeVante Bush</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" type="button">Dark Mode</button>
+    </header>
+
+    <main>
+      <!-- Hero: intro and call to action -->
+      <section id="hero">
+        <h1>Hi, I'm DeVante Bush</h1>
+        <p class="tagline">Full-Stack Developer in training</p>
+        <p>
+          I'm working through Codecademy's Full-Stack Engineer path. Here are a
+          few projects I've built along the way.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="contact.html" class="btn btn-outline">Contact Me</a>
+        </div>
+      </section>
+
+      <!-- Projects: one article per project card -->
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+          <!-- Project 1: Number Guesser -->
+          <article class="project-card">
+            <img
+              src="images/number-guesser.png"
+              alt="Screenshot of the Number Guesser game"
+            />
+            <h3>Number Guesser</h3>
+            <p>
+              A browser game where you play against the computer to guess a
+              secret number from 0 to 9. I wrote the game logic that picks the
+              target, compares guesses, and keeps score.
+            </p>
+            <ul class="tech">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://ktforge.github.io/Number-Guesser/"
+                target="_blank"
+                >Live Site</a
+              >
+              <a
+                href="https://github.com/ktforge/Number-Guesser"
+                target="_blank"
+                >Code</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 2: Vandalia Chess Club -->
+          <article class="project-card">
+            <img
+              src="images/chess-club.png"
+              alt="Screenshot of the Vandalia Chess Club website"
+            />
+            <h3>Vandalia Chess Club</h3>
+            <p>
+              A responsive site for a made-up chess club in Vandalia, Ohio. It
+              uses Flexbox and two breakpoints so it works on desktop, tablet,
+              and phone.
+            </p>
+            <ul class="tech">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Flexbox</li>
+              <li>Media Queries</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://ktforge.github.io/Chess-Club/" target="_blank"
+                >Live Site</a
+              >
+              <a href="https://github.com/ktforge/Chess-Club" target="_blank"
+                >Code</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 3: Fotomatic -->
+          <article class="project-card">
+            <img
+              src="images/fotomatic.png"
+              alt="Screenshot of the Fotomatic camera landing page"
+            />
+            <h3>Fotomatic</h3>
+            <p>
+              A debugging project. Codecademy handed me a broken landing page
+              for a made-up instant camera, and I tracked down the HTML and CSS
+              bugs using browser dev tools.
+            </p>
+            <ul class="tech">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>DevTools</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://ktforge.github.io/fotomatic_broken/"
+                target="_blank"
+                >Live Site</a
+              >
+              <a
+                href="https://github.com/ktforge/fotomatic_broken"
+                target="_blank"
+                >Code</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>Built by DeVante Bush</p>
+      <div class="footer-links">
+        <a href="https://github.com/ktforge" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/devante-bush/" target="_blank"
+          >LinkedIn</a
+        >
+      </div>
+    </footer>
   </body>
 </html>
