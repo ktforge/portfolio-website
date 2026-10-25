@@ -1,17 +1,17 @@
-// Grab the theme toggle button
+// dark mode button
 const themeToggle = document.getElementById("theme-toggle");
 
-// Apply a theme, update the button label, and save the choice
+// switch the theme, update the button text, and remember the choice
 function setTheme(theme) {
   document.body.classList.toggle("dark", theme === "dark");
   themeToggle.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
   localStorage.setItem("theme", theme);
 }
 
-// Load the saved theme when the page opens (default is light)
+// use the saved theme when the page loads, light if there isn't one
 setTheme(localStorage.getItem("theme") || "light");
 
-// Switch themes when the button is clicked
+// flip between light and dark on click
 themeToggle.addEventListener("click", () => {
   const isDark = document.body.classList.contains("dark");
   setTheme(isDark ? "light" : "dark");
